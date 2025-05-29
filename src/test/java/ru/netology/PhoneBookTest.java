@@ -1,6 +1,7 @@
 package ru.netology;
 
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class PhoneBookTest {
@@ -30,5 +31,21 @@ public class PhoneBookTest {
 
         // Проверка (Assert)
         assertEquals(expectedNumber, actualNumber);
+    }
+
+    @Test
+    void shouldReturnNamesInAlphabeticalOrder() {
+        // Подготовка
+        PhoneBook phoneBook = new PhoneBook();
+        phoneBook.add("Zoe", "111");
+        phoneBook.add("Alice", "222");
+        phoneBook.add("Bob", "333");
+        String expected = "Alice, Bob, Zoe";
+
+        // Действие
+        String actual = phoneBook.printAllNames();
+
+        // Проверка
+        assertEquals(expected, actual);
     }
 }

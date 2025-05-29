@@ -26,6 +26,10 @@ public class PhoneBook {
         return contacts.get(name);
     }
 
+    public String printAllNames() {
+        return "";
+    }
+
     public static void main(String[] args) {
 
     }
