@@ -1,14 +1,13 @@
 package ru.netology;
 
-import org.junit.Test;
-
+import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class PhoneBookTest {
     @Test
     void shouldFindNameByNumber() {
         // arrange
-        PhoneBook1 phoneBook = new PhoneBook1();
+        PhoneBook phoneBook = new PhoneBook();
         phoneBook.add("John", "123456");
         String expected = "John";
 
