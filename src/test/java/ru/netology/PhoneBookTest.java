@@ -54,4 +54,11 @@ public class PhoneBookTest {
         PhoneBook phoneBook = new PhoneBook();
         assertEquals("", phoneBook.printAllNames());
     }
+
+    @Test
+    void shouldReturnContactCountAfterAdd() {
+        PhoneBook phoneBook = new PhoneBook();
+        int count = phoneBook.add("John", "123"); // Используем возвращаемое значение
+        assertEquals(1, count);
+    }
 }
