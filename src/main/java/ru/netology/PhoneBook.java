@@ -2,6 +2,7 @@ package ru.netology;
 
 import java.util.Map;
 import java.util.HashMap;
+import java.util.TreeSet;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -27,7 +28,10 @@ public class PhoneBook {
     }
 
     public String printAllNames() {
-        return "";
+        if (contacts.isEmpty()) {
+            return "";  // Обрабатываем пустую книгу
+        }
+        return String.join(", ", new TreeSet<>(contacts.keySet()));
     }
 
     public static void main(String[] args) {

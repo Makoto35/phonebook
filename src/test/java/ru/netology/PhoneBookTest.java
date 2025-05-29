@@ -48,4 +48,10 @@ public class PhoneBookTest {
         // Проверка
         assertEquals(expected, actual);
     }
+
+    @Test
+    void shouldReturnEmptyStringIfNoContacts() {
+        PhoneBook phoneBook = new PhoneBook();
+        assertEquals("", phoneBook.printAllNames());
+    }
 }
