@@ -23,7 +23,7 @@ public class PhoneBook {
     }
 
     public String findByName(String name) {
-        return null;
+        return contacts.get(name);
     }
 
     public static void main(String[] args) {
